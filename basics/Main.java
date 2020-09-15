@@ -51,6 +51,7 @@ public static int flipNHeads(int num){
   return timesFlipped;
 }
 
+//Bade came to help
 
 public static void clock(){
   int num = 0;
