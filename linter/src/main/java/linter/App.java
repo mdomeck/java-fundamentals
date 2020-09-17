@@ -18,5 +18,30 @@ public class App {
             System.out.println("We couldn't find that file.");
             return;
         }
+
+        int counter = 1;
+        String errorString = "";
+
+        while(gates.hasNextLine()){
+
+            counter++;
+            String temp = gates.nextLine();
+            if(!temp.isBlank()) {
+
+                char endChar = temp.charAt(temp.length() -1);
+                if (endChar == ';' || endChar == '{' || endChar == '}' || temp.contains("if") || temp.contains("else")) {
+                } else {
+                    if(errorString.isBlank()){
+
+                        errorString = "Line " + counter + " is missing ;";
+                    } else {
+                        errorString = errorString + "\nLine " + counter + " is missing ;";
+                    }
+                }
+              }
+        }
+
+        System.out.println(errorString);
+
     }
 }
