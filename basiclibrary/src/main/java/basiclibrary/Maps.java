@@ -42,23 +42,31 @@ public class Maps {
         HashMap<String, Integer> votes = new HashMap<>();
 
         for (String name : plants) {
+
             if (votes.containsKey(name)) {
+
                 count = votes.get(name);
             } else {
                 count = 0;
             }
             votes.put(name, count + 1);
         }
-        System.out.println(votes.get("Bush"));
 
-        System.out.println(votes.keySet());
+        int mostVotes = 0;
+        String winner = "blah";
+        for(String potato : votes.keySet()){
+            if(votes.get(potato) > mostVotes){
+                winner = potato;
+                mostVotes = votes.get(potato);
+            }
+            }
 
-        String returnString = "Bush received the most votes!";
+
+
+        String returnString = winner + " received the most votes!";
 
         return "hi";
+
     }
 }
-
-
-
 
