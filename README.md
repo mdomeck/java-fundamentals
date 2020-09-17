@@ -27,3 +27,13 @@
 
 ### Arrays of Arrays
 - take an array or arrays and returns the lowest average
+
+## Lab 03
+
+### Weather Data
+Iterate through all of the data to find the min and max value. 
+
+### Tallying Election
+Function that accepts Strings, find the most votes
+### Linter
+error lines that don't have a semicolon. meet a number of exceptions
