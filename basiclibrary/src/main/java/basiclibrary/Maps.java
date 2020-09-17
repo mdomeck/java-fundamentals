@@ -30,23 +30,35 @@ public class Maps {
             }
         }
 
-//        String returnHigh = "High: " + high;
-//        String returnLow = "Low: " + low;
         return returnsString;
 
 
     }
 
+    // Help from Jack on contains Key
 
-        public String tally (List plants) {
-            HashMap<String, Integer> votes = new HashMap<>();
+    public String tally(List<String> plants) {
+        int count = 0;
+        HashMap<String, Integer> votes = new HashMap<>();
 
-            for(String name : plants){
-
-                
+        for (String name : plants) {
+            if (votes.containsKey(name)) {
+                count = votes.get(name);
+            } else {
+                count = 0;
             }
-            return "blah";
+            votes.put(name, count + 1);
         }
+        System.out.println(votes.get("Bush"));
 
+        System.out.println(votes.keySet());
+
+        String returnString = "Bush received the most votes!";
+
+        return "hi";
     }
+}
+
+
+
 
