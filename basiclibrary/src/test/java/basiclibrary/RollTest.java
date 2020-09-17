@@ -68,4 +68,6 @@ public class RollTest {
         assertArrayEquals(lowAvg, rollTest.arrayAvg(test) );
     }
 
+
+
     }
