@@ -8,12 +8,18 @@ import static org.junit.Assert.*;
 
 public class AppTest {
     @Test public void testAppHasAGreeting() {
-        App testLinter = new App();
-        String oneError = "Line 4: Missing semicolon.";
-        String fewErrors = "Line 1: Missing semicolon.\n" +
+//        App testLinter = new App();
+        String oneErrorExpected = "Line 4: Missing semicolon.";
+        String oneErrorActual = App.theLinter("src/main/resources/oneError.js");
+        assertEquals("Should be missing one semicolon", oneErrorActual, oneErrorExpected);
+
+
+        String fewErrorsExpected = "Line 1: Missing semicolon.\n" +
                 "Line 3: Missing semicolon.\n" +
                 "Line 5: Missing semicolon"
-        String manyErrors = "Line 3: Missing semicolon\n" +
+
+
+        String manyErrorsExpected = "Line 3: Missing semicolon\n" +
                 "Line 5: Missing semicolon\n" +
                 "Line 11: Missing semicolon\n" +
                 "Line 13: Missing semicolon\n" +
