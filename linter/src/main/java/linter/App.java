@@ -24,12 +24,12 @@ public class App {
             return "Did not find file";
         }
 
-        int counter = 0;
+        int lineNumber = 0;
         String errorString = "";
 
         while(gates.hasNextLine()){
 
-            counter++;
+            lineNUmber++;
             String temp = gates.nextLine();
             if(!temp.isBlank()) {
 

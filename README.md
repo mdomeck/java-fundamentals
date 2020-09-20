@@ -6,11 +6,11 @@
 - takes in word and number and returns a string
 
 ### Coin Flip
-- flipNHeads(n)
+- Function called flipNHeads that accepts an integer (n) and flips wintil (n) heads are flipped in a row.
 - Math.random()
 
 ### CLock
-- clock()
+- Method clock() that uses LacalDateTime object to constantly print out the current time to the console, second by second.
 - .now()
 
 ## Lab 02- 
