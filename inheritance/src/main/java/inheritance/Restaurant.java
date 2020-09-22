@@ -52,6 +52,6 @@ public class Restaurant {
     public String toString(){
         return String.format("Restaurant: %s, Stars: %d, Price: %s", name, stars, price);
     }
-    
+
 
 }
