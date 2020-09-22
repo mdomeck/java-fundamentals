@@ -10,6 +10,18 @@ public class AppTest {
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
     }
 
+    @Test public void testRestaurant(){
+        Restaurant Roosters = new Restaurant("Roosters", 5, "$$");
+    }
+
+    @Test public void testReview(){
+        Review review1 = new Review("Roosters",4, "$$", "best wings in town", "Minnie Mouse");
+    }
+    @Test public void toStringTest(){
+        assertTrue(String.format("Roosters", "$$", "Minnie Mouse", 4, "Best wings ever!"), true);
+    }
+
+
 
 
 
