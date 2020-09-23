@@ -9,3 +9,11 @@ Extends from Restaurant
 
 ### addReview
 Update Restaurant to include Review 
+
+### Shop
+Class Shop extends Restaurant and adds description to its constructor
+
+### Theater
+Class Theater extends Restaurant and adds ArrayList of movies
+function addMovie
+function removeMovie

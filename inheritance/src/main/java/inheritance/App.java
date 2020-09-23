@@ -10,13 +10,21 @@ public class App {
         Restaurant restaurant = new Restaurant("Roosters", 5, "$$");
         System.out.println(restaurant);
 
-        Review minnie = new Review("Roosters", 4, "$$", "Best wings ever!", "Minnie Mouse");
+        Review minnie = new Review("Best wings ever!","Minnie Mouse", 5);
+        minnie.restaurantImAbout = restaurant;
         System.out.println(minnie);
 
-        restaurant.addToFeedback(minnie);
+        restaurant.addReview(minnie);
         System.out.println(restaurant.feedback);
 
+        Shop shop = new Shop("Nordstrom Rack",5, "$$", "Apparel");
+        System.out.println(shop);
 
+//        Review nordstrom = new Review("I love shopping here!" 5, )
+//        shop.addReview();
+
+        Theater theater = new Theater("AMC", 5, "$$");
+        System.out.println(theater);
     }
 
 
