@@ -18,12 +18,16 @@ public class RestaurantTest {
     @Test public void toStringTest(){
         assertTrue(String.format("Roosters", "$$", "Minnie Mouse", 4, "Best wings ever!"), true);
     }
-//    @Test public void testRestaurantReview(){
-//        Restaurant roosters = new Restaurant("Roosters", 5, "$$");
-//        Review testReview = new Review("Best wings in town!", "Minnie Mouse", 5);
-//        roosters.addReview(testReview);
-//       assertEquals(roosters.feedback.indexOf(0), testReview);
-//
-//    }
+
+
+    @Test
+    public void testShopReview(){
+        Restaurant roosters = new Restaurant("Roosters", 5, "$$");
+        Review restaurantReview = new Review("Best Wings ever!", "Meghan", 5);
+        roosters.addReview(restaurantReview);
+        System.out.println(roosters.feedback);
+        assertEquals("[Author: Meghan  stars: 5 body: Best Wings ever!]", roosters.feedback.toString());
+    }
+
 
 }

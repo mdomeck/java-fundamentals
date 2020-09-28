@@ -3,18 +3,13 @@ package inheritance;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+
 
 public class TheaterTest {
 
-    @Test
-    public void toStringTest(){
-        assertTrue(String.format("AMC", 5, "$$"), true);
-
-    }
 
     @Test
-    public void testTheater(){
+    public void testAddTheater(){
         Theater amc = new Theater("AMC", 5, "$$");
         amc.addMovie("Mary Poppins");
         assertEquals(amc.getName(), "AMC");
@@ -23,12 +18,27 @@ public class TheaterTest {
         assertEquals(amc.movieListings.toString(), "[Mary Poppins]");
     }
 
-//    @Test public void testTheaterReview(){
-//        Theater amc = new Theater("AMC", 5, "$$");
-//        Review testReview = new Review("I love the popcorn!", "Minnie Mouse", 5);
-//        amc.addReview(testReview);
-////        assertEquals(amc.feedback.indexOf(0), testReview);
-//
-//    }
+    @Test
+    public void testRemoveTheater(){
+        Theater amc = new Theater("AMC", 5, "$$");
+        amc.addMovie("Mary Poppins");
+        assertEquals(amc.getName(), "AMC");
+        assertEquals(amc.getStars(), 5);
+        assertEquals(amc.getPrice(), "$$");
+        assertEquals(amc.movieListings.toString(), "[Mary Poppins]");
+        amc.removeMovie("Mary Poppins");
+        assertEquals(amc.movieListings.toString(), "[]");
+    }
+
+    @Test
+    public void testShopReview(){
+        Theater amc = new Theater("AMC", 5, "$$");
+        Review theaterReview = new Review("Love the popcorn!", "Meghan", 5);
+        amc.addReview(theaterReview);
+        System.out.println(amc.feedback);
+        assertEquals("[Author: Meghan  stars: 5 body: Love the popcorn!]", amc.feedback.toString());
+    }
+
+
 
 }

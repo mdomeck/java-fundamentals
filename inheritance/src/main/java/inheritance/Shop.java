@@ -2,7 +2,7 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class Shop extends Restaurant implements IReviewable{
+public class Shop extends Restaurant{
 
     private String description;
 
