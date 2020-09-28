@@ -2,8 +2,9 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class Theater extends Restaurant implements IReviewable{
+public class Theater extends Restaurant{
      public ArrayList<String> movieListings = new ArrayList<>();
+     public ArrayList<Review> reviewArrayList = new ArrayList<>();
 
     public Theater(String name, int stars, String price) {
         super(name, stars, price);

@@ -3,7 +3,7 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class Restaurant implements IReviewable {
+public class Restaurant {
     public ArrayList<Review> feedback = new ArrayList<>();
     public String name;
     public int stars;
