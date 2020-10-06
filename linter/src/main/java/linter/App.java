@@ -24,23 +24,25 @@ public class App {
             return "Did not find file";
         }
 
+
         int lineNumber = 0;
         String errorString = "";
 
         while(gates.hasNextLine()){
 
-            lineNUmber++;
+            lineNumber++;
             String temp = gates.nextLine();
             if(!temp.isBlank()) {
 
                 char endChar = temp.charAt(temp.length() -1);
                 if (!(endChar == ';' || endChar == '{' || endChar == '}' || temp.contains("if") || temp.contains("else"))) {
 
+
                     if(errorString.isBlank()){
 
-                        errorString = "Line " + counter + ": Missing semicolon";
+                        errorString = "Line " + lineNumber + ": Missing semicolon";
                     } else {
-                        errorString = errorString + "\nLine " + counter + ": Missing semicolon";
+                        errorString = errorString + "\nLine " + lineNumber + ": Missing semicolon";
                     }
                 }
               }

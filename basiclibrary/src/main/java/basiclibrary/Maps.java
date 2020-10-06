@@ -65,7 +65,7 @@ public class Maps {
 
         String returnString = winner + " received the most votes!";
 
-        return "hi";
+        return returnString;
 
     }
 }

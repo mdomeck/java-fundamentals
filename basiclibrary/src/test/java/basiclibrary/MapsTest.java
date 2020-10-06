@@ -24,7 +24,7 @@ public class MapsTest {
         }
 
 
-        public class TallyElectionTest {
+        public static class TallyElectionTest {
             @Test
             public void testTallying() {
                 Maps maps = new Maps();
