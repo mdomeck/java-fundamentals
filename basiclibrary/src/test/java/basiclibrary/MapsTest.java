@@ -19,7 +19,7 @@ public class MapsTest {
         };
 
         String returnString = "High: 72\nLow: 51\nNever saw temperature: 63\nNever saw temperature: 67\nNever saw temperature: 68\nNever saw temperature: 69";
-
+        System.out.println(returnString);
           assertEquals(returnString, maps.missingTemps(weeklyMonthTemperatures));
         }
 
@@ -41,6 +41,8 @@ public class MapsTest {
                 votes.add("Bush");
 
                 String winner = "Bush received the most votes!";
+                System.out.println(votes);
+                System.out.println(winner);
                 assertEquals(winner, maps.tally(votes));
             }
         }
