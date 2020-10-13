@@ -5,12 +5,12 @@ import java.util.Arrays;
 
 public class Roll {
 
-    public  int[] roll(int rolls){
+    public  int[] roll(int rolls) {
         int[] diceArr = new int[rolls];
-        for(int i = 0; i < rolls; i++){
+        for (int i = 0; i < rolls; i++) {
             diceArr[i] = dice();
-            System.out.println(Arrays.toString(diceArr));
         }
+        System.out.println(Arrays.toString(diceArr));
         return diceArr;
     }
 
